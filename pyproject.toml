@@ -1,0 +1,29 @@
+[project]
+name = "research-kit"
+version = "0.1.0"
+description = "Open problems as data: a curated problem catalog under an evidence layer rebuilt from the literature, as one graph"
+readme = "README.md"
+authors = [
+    { name = "Madhulatha Mandarapu", email = "madhulatha@samyama.ai" },
+    { name = "Sandeep Kunkunuru", email = "sandeep@samyama.ai" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.12.1",
+    "httpx>=0.27",
+]
+
+[project.scripts]
+research-kit = "research_kit.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.27,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "research_kit"

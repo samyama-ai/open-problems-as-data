@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.env
+
+# Generated, large, or third-party. None of it is redistributed here.
+runs/                 # per-run caches, model calls and logs; see README "What is not here"
+catalogs/             # rebuilt from the two public catalog repos; scripts/catalog_from_*_kg.py
+vocab/data/           # vocabularies downloaded from their publishers by vocab/fetch_vocab.py
+vocab/build/
+*.sgsnap

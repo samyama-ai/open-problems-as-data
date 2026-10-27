@@ -1,0 +1,55 @@
+# The two vocabularies this paper's ontology-grounding table used, and nothing else.
+#
+# Extracted from samyama-ontologies/catalog/resources.yaml, which is NOT published: its
+# `used_by` entries name internal repositories and paths. Only the acquisition blocks are
+# here -- the publisher's own URL, the file, the version, the byte count and the sha256 --
+# so `fetch_vocab.py` can verify what it downloads.
+#
+# NO VOCABULARY DATA IS REDISTRIBUTED. `data/` is gitignored. Each file is downloaded from
+# its publisher at the URL below and checked against the recorded hash.
+#
+# LICENCES DIFFER AND ONE IS UNSETTLED:
+#   cso      CC BY 4.0. The download needs a signed-in CSO portal account, so it is manual.
+#   acm-ccs  licence UNSTATED (ACM copyright). The note below is the maintainers' own and is
+#            reproduced unchanged: treat as internal use until the terms are confirmed with
+#            ACM. Publishing this fetcher is not redistribution -- it points at ACM's own
+#            public URL -- but anyone using it should read that note first.
+
+- id: cso
+  name: Computer Science Ontology (CSO)
+  kind: ontology
+  domain: cs
+  publisher: Open University (Knowledge Media Institute)
+  url: https://cso.kmi.open.ac.uk/home
+  license: CC BY 4.0
+  acquire:
+    url: https://cso.kmi.open.ac.uk/downloads
+    file: CSO.3.5.ttl.zip
+    version: '3.5'
+    bytes: 1151796
+    sha256: 7d8453692720dd761041e718e0dc07dbb36e22e9c5108afcd63ff31391b84c93
+    fetched: 2026-10-19
+    manual: The download needs a signed-in CSO portal account. Sign in at cso.kmi.open.ac.uk, open Downloads,
+      and take "Download .ttl" for v3.5.
+    notes: 'Released 2025-07-29. One Turtle file, 20.2 MB extracted, 166,518 triples, 14,636 cso:Topic.
+      vocab_to_graph.py merges cso:preferentialEquivalent synonym clusters into their preferred topic
+      (the others become aliases) and reads cso:superTopicOf as BROADER: 11,438 concepts, 18,658 BROADER
+      edges. cso:contributesTo (48,980) and cso:relatedEquivalent are not hierarchy and are not emitted.'
+- id: acm-ccs
+  name: ACM Computing Classification System 2012 (CCS)
+  kind: taxonomy
+  domain: cs
+  publisher: Association for Computing Machinery
+  url: https://dl.acm.org/ccs
+  license: unstated (ACM copyright)
+  acquire:
+    url: https://dl.acm.org/pb-assets/dl_ccs/acm_ccs2012-1626988337597.xml
+    version: '2012'
+    bytes: 613931
+    sha256: 49f7911725537408517d00a3a7fef2ab5600777a9e1c1b79d9a0925b868dc045
+    fetched: 2026-10-19
+    notes: 'SKOS in RDF/XML. The file writes lang="en" where RDF/XML needs xml:lang; vocab_to_graph.py
+      repairs it in memory. Identifiers are bare dotted paths, so convert with --base https://dl.acm.org/ccs2012/:
+      2,113 concepts, 2,100 BROADER edges, 13 top concepts. No licence is stated in the file or on dl.acm.org/ccs,
+      whose page answers 403 to non-browser clients; the file itself downloads directly. Treat as internal
+      use until the terms are confirmed with ACM.'

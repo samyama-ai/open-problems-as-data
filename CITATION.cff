@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+title: "Open problems as data: pipeline and measurements"
+message: "If you use this artifact, please cite the paper it accompanies."
+type: software
+authors:
+  - family-names: Mandarapu
+    given-names: Madhulatha
+    email: madhulatha@samyama.ai
+    affiliation: VaidhyaMegha Private Limited
+  - family-names: Kunkunuru
+    given-names: Sandeep
+    email: sandeep@samyama.ai
+    affiliation: VaidhyaMegha Private Limited
+license: Apache-2.0
+repository-code: "https://github.com/samyama-ai/open-problems-as-data"
+abstract: >-
+  A curated open-problem catalog carried in unchanged as a problem layer, under an evidence layer
+  rebuilt from OpenAlex, joined by typed provenance-carrying links in one graph database. Includes
+  the measurements behind two papers: the non-regression benchmark on two research fields, and a
+  hand check of all 41 solves/refutes verdicts the system produced, of which 9 are correct, 30
+  partly correct and 2 wrong.
+keywords:
+  - scholarly knowledge graph
+  - open problems
+  - entity resolution
+  - provenance
+  - large language models
+preferred-citation:
+  type: conference-paper
+  title: "Open Problems as Data: Toward Living, Queryable Knowledge Graphs of a Research Field"
+  authors:
+    - family-names: Mandarapu
+      given-names: Madhulatha
+    - family-names: Kunkunuru
+      given-names: Sandeep
+  collection-title: "43rd IEEE International Conference on Data Engineering (ICDE), Data Engineering Future Technologies track"
+  year: 2027

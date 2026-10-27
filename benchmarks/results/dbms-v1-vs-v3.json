@@ -1,0 +1,223 @@
+{
+ "source": {
+  "v1": {
+   "name": "dbms-research-kg",
+   "source_repo": "https://github.com/samyama-ai/dbms_research",
+   "source_commit": "5fff7f74508a52ac238f3bb608b8c8c872489fec",
+   "kg_commit": "78c1486c546ef52c87a182b0da76ab712ae58e2f",
+   "as_of": "2026-09-09",
+   "nodes": 20211,
+   "edges": 53721,
+   "where": "catalogs/dbms/meta.json"
+  },
+  "v3": {
+   "run_script": "scripts/run-dbms.sh",
+   "run_date": "2026-10-20",
+   "server": "http://localhost:18088",
+   "snapshot": "s3://samyama-data/snapshots/research-kit-dbms.sgsnap",
+   "snapshot_local": "runs/dbms/dbms.sgsnap",
+   "snapshot_bytes_logged": 16860132,
+   "snapshot_mb": 16.9,
+   "where": "runs/dbms.2.log"
+  },
+  "bench_files": {
+   "v1": "runs/bench/dbms-v1.json",
+   "v3": "runs/bench/dbms-v3.json",
+   "v3_limited": "runs/bench/dbms-v3-limited.json",
+   "v3_limited_queries": "benchmarks/dbms_v3_limited.cypher"
+  },
+  "verified_on": "2026-10-23"
+ },
+ "graph": {
+  "nodes": 78475,
+  "edges": 313878,
+  "where": "runs/dbms.2.log 'graph:' line; live count(n), count(r)"
+ },
+ "bridge": {
+  "seed_researchers": 40,
+  "catalog_papers": 2679,
+  "papers_matched": 2278,
+  "papers_unresolved": 401,
+  "catalog_people": 4454,
+  "people_matched": 3087,
+  "distinct_authors_matched": 2488,
+  "distinct_works_matched": 2244,
+  "where": "runs/dbms.2.log 'catalog seed'; runs/dbms/catalog_bridge.json (papers 2278, unresolved 401); live Paper/Person SAME_AS counts"
+ },
+ "original_queries": {
+  "questions": 48,
+  "answerable": 47,
+  "identical": 47,
+  "no_cypher": [
+   39
+  ],
+  "first_build_q19_cited_papers": 8769,
+  "method": "per question: rows, columns and records (first 20 rows) compared order-insensitively between dbms-v1.json and dbms-v3.json"
+ },
+ "limited": {
+  "Q12": {
+   "v1_researchers": 11,
+   "v1_has_dates": false,
+   "v3_rows_year_ge_2022": 0,
+   "v3_evidence_works_for_x": 2,
+   "v3_last_evidence_year": 1983,
+   "problems_with_new_works": 336
+  },
+  "Q19": {
+   "v1_papers_after_2015": 787,
+   "v1_after_2015_2010s": 465,
+   "v1_after_2015_2020s": 322,
+   "v3_evidence_after_2015": 873,
+   "v3_new_to_catalog": 480
+  },
+  "Q21": {
+   "v1_doi": 1800,
+   "v1_arxiv": 454,
+   "v1_dblp_only": 191,
+   "papers": 2679,
+   "v3_in_openalex": 2278,
+   "v3_neither_doi_nor_match": 386
+  },
+  "Q22": {
+   "v1_unverified": 15,
+   "v3_unverified_not_in_openalex": 15
+  },
+  "Q26": {
+   "v1_rows": 0,
+   "v3_researchers_with_orcid": 2181
+  },
+  "Q28": {
+   "v1_nodes": 3,
+   "v3_openalex_authors": 1
+  },
+  "Q42": {
+   "v1_open_problems_nobody": 72,
+   "v3_open_problems_nobody": 38
+  },
+  "Q45": {
+   "v1_open_no_recent": 86,
+   "v3_open_no_recent": 70
+  },
+  "Q46": {
+   "v1_rows": 0,
+   "v3_papers_with_cited_by": 2278
+  },
+  "Q47": {
+   "v1_rows": 0,
+   "v3_solves_verdicts": 4,
+   "v3_status_suggestions": 2,
+   "suggestions": {
+    "order-dependencies-implication": "solved",
+    "query-determinacy-views": "partially-solved"
+   },
+   "hand_check_items": 30
+  },
+  "Q48": {
+   "v1_rows": 0,
+   "v3_funders_for_x": 3,
+   "v3_papers_for_x_with_funders": 2,
+   "v3_catalog_papers_with_funders": 567
+  }
+ },
+ "totals": {
+  "v1_limited": 20,
+  "v1_refused": 3,
+  "attempted": 11,
+  "better": 8,
+  "same_corroborated": 1,
+  "no_change": 1,
+  "answered_unverified": 1,
+  "other_limited_not_attempted": 12,
+  "where": "attempted/better/same/no_change derived from the section 2 table; v1_limited not in any reachable file"
+ },
+ "what_else": {
+  "evidence": {
+   "catalog_problems": 1053,
+   "problems_with_evidence": 579,
+   "evidence_works": 1773,
+   "evidence_links": 1843,
+   "problems_with_outside_papers": 336,
+   "outside_works": 770,
+   "outside_links": 807,
+   "outside_definition": "Work with no incoming SAME_AS from any catalog Paper (reproduces 336/770); 'not cited by that same problem' gives 467/1199"
+  },
+  "verdicts": {
+   "advances": 893,
+   "restates": 403,
+   "unrelated": 351,
+   "solves": 4,
+   "refutes": 2,
+   "none": 190,
+   "status_papers_per_problem": 8,
+   "open_problems_checked": 572,
+   "papers_checked": 1653
+  },
+  "ideas": {
+   "total": 52,
+   "open": 16,
+   "partially_solved": 16,
+   "empirically_open": 20,
+   "rejected": 0,
+   "distinct_problems": 48
+  },
+  "grounding": {
+   "paper_problems": 5058,
+   "grounded": 1265,
+   "grounded_pct": 25.0,
+   "same": 138,
+   "narrower": 1127,
+   "paper_problem_nodes_live": 5276
+  }
+ },
+ "cost": {
+  "calls": 2808,
+  "input_tokens": 23556542,
+  "output_tokens": 6543037,
+  "web_search_requests": 431,
+  "batch_calls": 2799,
+  "by_model": {
+   "claude-sonnet-5-5": {
+    "calls": 2754,
+    "batch_calls": 2746
+   },
+   "claude-opus-5-5": {
+    "calls": 54,
+    "batch_calls": 53
+   }
+  },
+  "dollars": null,
+  "where": "runs/dbms/usage.json"
+ },
+ "verification": {
+  "/what_else/grounding/paper_problems": {
+   "md": 5058,
+   "found": 5276,
+   "where": "live MATCH (pp:PaperProblem) count = 5276; 5058 matches runs/dbms.2.log and runs/dbms/catalog_ground.json stats.concepts (problems after canonical merge). md agrees with the files, not the node count."
+  },
+  "/totals/v1_limited": {
+   "md": 20,
+   "found": "unverified",
+   "where": "V1 'limited' labels are in dbms-research-kg benchmarks/scope_questions.md, not present locally; dbms-v1.json/.md have no limited/refused labels"
+  },
+  "/totals/v1_refused": {
+   "md": 3,
+   "found": "unverified (consistent: Q46-Q48 return 0 rows in dbms-v1.json)",
+   "where": "runs/bench/dbms-v1.json"
+  },
+  "/original_queries/first_build_q19_cited_papers": {
+   "md": 8769,
+   "found": "unverified",
+   "where": "first V3 build no longer exists; current V3 Q19 matches V1"
+  },
+  "/limited/Q47/hand_check_items": {
+   "md": 30,
+   "found": "unverified",
+   "where": "refers to issues #6, #8; not checked"
+  },
+  "/limited/Q12/v3_last_evidence_year": {
+   "md": 1983,
+   "found": 1983,
+   "where": "live query; note the bench query (year >= 2022) returns 0 rows and does not itself show 1983"
+  }
+ }
+}

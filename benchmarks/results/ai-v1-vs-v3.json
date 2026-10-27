@@ -1,0 +1,330 @@
+{
+ "source": {
+  "v1": {
+   "kg": "ai-research-kg",
+   "kg_commit": "4742747",
+   "catalog": "samyama-ai/ai_research",
+   "catalog_commit": "a02e87b",
+   "nodes": 29707,
+   "edges": 62842
+  },
+  "v3": {
+   "run_date": "2026-10-23",
+   "snapshot": "runs/ai/ai.sgsnap",
+   "snapshot_bytes": 16826558,
+   "s3": "s3://samyama-data/snapshots/research-kit-ai.sgsnap"
+  },
+  "files": {
+   "v1": "runs/bench/ai-v1.json",
+   "v3": "runs/bench/ai-v3.json",
+   "v3_limited": "runs/bench/ai-v3-limited.json",
+   "v1_limited": "runs/bench/ai-v1-limited.json"
+  }
+ },
+ "graph": {
+  "nodes": 120972,
+  "edges": 463344,
+  "works": 7877
+ },
+ "seeds": 40,
+ "bridge": {
+  "catalog_papers": 4932,
+  "matched": 4630,
+  "by_doi": 0,
+  "catalog_papers_with_doi": 1,
+  "by_arxiv": 3026,
+  "by_title_year": 1604,
+  "unmatched": 302,
+  "works_with_two_catalog_papers": 21
+ },
+ "people": {
+  "catalog_people": 15102,
+  "linked": 11657,
+  "unlinked": 3445,
+  "openalex_authors": 7807,
+  "authors_with_several_catalog_nodes": 2732,
+  "catalog_nodes_on_those": 6582
+ },
+ "top_author": {
+  "name": "Luke Zettlemoyer",
+  "papers": 31
+ },
+ "original_queries": {
+  "queries": 35,
+  "expect_empty": 2,
+  "same_rows": 34,
+  "identical_order": 26,
+  "tie_order_only": 8,
+  "limit_tie_differs": 1,
+  "limit_tie_query": "AR14",
+  "same_rows_without_limit": 35
+ },
+ "limited": {
+  "Q9": {
+   "v1_status": "solved-but-impractical",
+   "v3_evidence_works": 1,
+   "v3_verdicts": 0
+  },
+  "Q12": {
+   "v3_methods": 23,
+   "v3_cited_papers_matched": 10,
+   "cited_papers": 12
+  },
+  "Q20": {
+   "v1_top": {
+    "Luke Zettlemoyer": 169,
+    "Percy Liang": 144,
+    "Mike Lewis": 108
+   },
+   "v3_top": {
+    "Luke Zettlemoyer": 179,
+    "Percy Liang": 157,
+    "Christopher Ré": 119
+   }
+  },
+  "Q23": {
+   "v1_labs": 3,
+   "v3_recent_researchers": 0
+  },
+  "Q24": {
+   "v1_mike_lewis_shared": 10,
+   "v3_mike_lewis_coauthor": 32,
+   "v3_hajishirzi": 26,
+   "v3_sewon_min": 17
+  },
+  "Q25": {
+   "v3_literature_review_problems": 125,
+   "v3_compute_optimal_scaling_problems": 111,
+   "v3_sft_problems": 88,
+   "v3_lora_problems": 43,
+   "min_papers_per_method": 3
+  },
+  "Q26": {
+   "v3_literature_review_topics": 31,
+   "v3_compute_optimal_scaling_topics": 30,
+   "v3_sft_topics": 26
+  },
+  "Q27": {
+   "v3_lora_problems": 61
+  },
+  "Q39": {
+   "v1": 0,
+   "v3": 0,
+   "min_cited_open_no_lab": 6
+  },
+  "Q48": {
+   "v1_open_no_lab": 54,
+   "v3_open_no_lab": 54,
+   "v3_no_lab_no_evidence": 23
+  },
+  "Q40": {
+   "v3_papers_with_funders": 1623,
+   "v3_problems_reached": 951,
+   "v3_nsf_problems": 775
+  },
+  "Q42": {
+   "v3_papers_with_cited_by": 4630,
+   "v3_top_cited_by": 99043
+  },
+  "Q43": {
+   "v1": 0,
+   "v3": 7320,
+   "v3_full": 3657,
+   "v3_initials": 2144,
+   "v3_surname": 1519
+  },
+  "Q44": {
+   "v1_nodes": 3,
+   "v3_authors": 1
+  },
+  "Q45": {
+   "v1_newest_cited_year": 2025,
+   "v3_works_2026": 71,
+   "v3_works_2026_not_catalog": 66,
+   "v3_works_2024_on": 727,
+   "v3_works_2024_on_not_catalog": 147
+  },
+  "Q47": {
+   "v3_solves": 3,
+   "v3_refutes": 32,
+   "v3_refuted_problems": 26,
+   "v3_suggested_status_changes": 2
+  }
+ },
+ "totals": {
+  "rows": 18,
+  "attempted": 16,
+  "better": 5,
+  "refused_to_answered": 4,
+  "refused_to_partly_answered": 3,
+  "mixed": 1,
+  "same": 1,
+  "no_change": 2,
+  "not_attempted": 2
+ },
+ "data_issues": {
+  "wrong_abstract_work": "W3001279689",
+  "wrong_abstract_citing_problems": 54,
+  "works_abstract_no_title_word": 266,
+  "works_scanned": 7040
+ },
+ "what_else": {
+  "catalog_problems": 1000,
+  "problems_with_evidence": 592,
+  "evidence_links": 2013,
+  "evidence_works": 1969,
+  "problems_with_uncited_works": 360,
+  "uncited_works": 821,
+  "problems_with_non_catalog_works": 187,
+  "non_catalog_works": 300,
+  "evidence_by_status": {
+   "open": 229,
+   "empirically-open": 161,
+   "partially-solved": 130,
+   "methodologically-blocked": 58,
+   "solved-but-impractical": 14
+  },
+  "verdicts": {
+   "advances": 1062,
+   "unrelated": 416,
+   "restates": 235,
+   "refutes": 32,
+   "solves": 3,
+   "none": 265
+  },
+  "status_checked": 578,
+  "status_changes_suggested": 2,
+  "solves": [
+   {
+    "problem": "14-long-context/packed-sequence-cross-document-attention",
+    "status": "empirically-open",
+    "suggested": "partially-solved"
+   },
+   {
+    "problem": "23-privacy-memorization/hidden-state-privacy-accounting",
+    "status": "partially-solved",
+    "suggested": null
+   },
+   {
+    "problem": "24-multimodal/modality-gap-contrastive-embeddings",
+    "status": "partially-solved",
+    "suggested": "solved"
+   }
+  ],
+  "ideas": {
+   "total": 52,
+   "subareas": 13,
+   "target_offered_open": 52,
+   "distinct_problems": 50,
+   "rejected": 0,
+   "by_status": {
+    "open": 26,
+    "empirically-open": 15,
+    "partially-solved": 6,
+    "methodologically-blocked": 5
+   }
+  },
+  "catalog_grounding": {
+   "placed": 1311,
+   "of": 6885,
+   "percent": 19.0,
+   "same": 145,
+   "narrower": 1166,
+   "catalog_problems_reached": 592,
+   "note": "6,885 = run problems after canonical merge (runs/ai.log); the graph holds 7,144 PaperProblem nodes"
+  },
+  "ontology_grounding": {
+   "classes": 13551,
+   "placed": 10698,
+   "of": 42941,
+   "percent": 24.9,
+   "refused": 9,
+   "problems": {
+    "same": 47,
+    "narrower": 1917,
+    "of": 6885,
+    "percent": 28.5
+   },
+   "methods": {
+    "same": 255,
+    "narrower": 3352,
+    "of": 14198,
+    "percent": 25.4
+   },
+   "subjects": {
+    "same": 651,
+    "narrower": 1742,
+    "of": 7564,
+    "percent": 31.6
+   },
+   "metrics": {
+    "same": 156,
+    "narrower": 514,
+    "of": 5198,
+    "percent": 12.9
+   },
+   "datasets_tools": {
+    "same": 74,
+    "narrower": 188,
+    "of": 4431,
+    "percent": 5.9
+   },
+   "applications": {
+    "same": 489,
+    "narrower": 1313,
+    "of": 4665,
+    "percent": 38.6
+   }
+  },
+  "refutes": [
+   "01-tokenization/intrinsic-tokenizer-metrics",
+   "02-attention/attention-as-faithful-explanation",
+   "02-attention/icl-implicit-gradient-descent",
+   "03-training-dynamics/adam-vs-sgd-transformers",
+   "04-alignment/activation-steering-reliability",
+   "04-alignment/corrigibility-with-competent-agency",
+   "04-alignment/debate-truth-amplification",
+   "06-data-pipeline/influence-function-stability-at-scale",
+   "07-embeddings/cross-lingual-alignment-no-parallel-data",
+   "08-loss-and-heads/label-smoothing-distillation-interference",
+   "10-scaling-laws/chinchilla-coefficient-reproducibility",
+   "12-quantization-compression/calibration-set-sensitivity",
+   "12-quantization-compression/lottery-ticket-existence-at-initialization",
+   "12-quantization-compression/non-uniform-quantization-grid-optimality",
+   "12-quantization-compression/perplexity-sufficiency-compression-metric",
+   "20-interpretability/causal-faithfulness-metrics",
+   "22-safety-robustness/certified-robustness-beyond-smoothing-radii",
+   "22-safety-robustness/jailbreak-robustness-unbounded-prompt-space",
+   "22-safety-robustness/provable-unlearning-hazardous-capabilities",
+   "22-safety-robustness/robustness-accuracy-tradeoff-law-or-artifact",
+   "23-privacy-memorization/distillation-privacy-barrier",
+   "29-distillation/exposure-bias-sequence-distillation",
+   "30-synthetic-data/counterfactual-augmentation-spurious-removal",
+   "33-uncertainty-calibration/aleatoric-epistemic-identifiability",
+   "33-uncertainty-calibration/cold-posterior-effect",
+   "33-uncertainty-calibration/deep-ensembles-versus-bayesian-posteriors"
+  ]
+ },
+ "cost": {
+  "llm_calls": 3698,
+  "input_tokens": 28641600,
+  "output_tokens": 9643523,
+  "web_searches": 417,
+  "batch_calls": 3690,
+  "sync_calls": 8,
+  "by_model": {
+   "claude-sonnet-5-5": {
+    "calls": 3644,
+    "input_tokens": 21620102,
+    "output_tokens": 9102441,
+    "batch_calls": 3637
+   },
+   "claude-opus-5-5": {
+    "calls": 54,
+    "input_tokens": 7021498,
+    "output_tokens": 541082,
+    "batch_calls": 53
+   }
+  }
+ }
+}

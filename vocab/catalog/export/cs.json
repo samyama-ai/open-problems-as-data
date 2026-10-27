@@ -1,0 +1,90 @@
+{
+  "domain": "cs",
+  "scope": "Computer science research subjects. Overlaps databases and graph-db, which hold this domain's standards and benchmarks; cs itself is for subject classification",
+  "grounded_by": [
+    "openalex-topics",
+    "cso",
+    "acm-ccs"
+  ],
+  "candidates": [],
+  "gaps": [
+    "Alignment measured once (research-kit DBMS V3, 2026-10-20): 9,444 of 28,598 extracted concepts grounded (33.0%); by kind, problems 40.9%, applications 47.2%, methods 31.6%, subjects 38.2%, metrics 14.4%, datasets/tools 10.1%. Same vocabularies on the earlier CS runs (2026-10-20): vectors 33.1% of 13,902, graph-learning 29.1% of 28,827, graphs 29.7% of 39,072. Not hand-checked (research-kit #6)",
+    "openalex-topics is not built under build/, so research-kit grounds on cso and acm-ccs only",
+    "acm-ccs licence is not stated by ACM; internal use until confirmed"
+  ],
+  "counts": {
+    "total": 3,
+    "loaded": 3,
+    "candidate": 0
+  },
+  "resources": [
+    {
+      "id": "cso",
+      "name": "Computer Science Ontology (CSO)",
+      "kind": "ontology",
+      "status": "loaded",
+      "license": "CC BY 4.0",
+      "url": "https://cso.kmi.open.ac.uk/home",
+      "publisher": "Open University (Knowledge Media Institute)",
+      "aliases": [
+        "CSO"
+      ],
+      "acquire": {
+        "url": "https://cso.kmi.open.ac.uk/downloads",
+        "file": "CSO.3.5.ttl.zip",
+        "version": "3.5",
+        "bytes": 1151796,
+        "sha256": "7d8453692720dd761041e718e0dc07dbb36e22e9c5108afcd63ff31391b84c93",
+        "fetched": "2026-10-19",
+        "manual": "The download needs a signed-in CSO portal account. Sign in at cso.kmi.open.ac.uk, open Downloads, and take \"Download .ttl\" for v3.5.",
+        "notes": "Released 2025-07-29. One Turtle file, 20.2 MB extracted, 166,518 triples, 14,636 cso:Topic. vocab_to_graph.py merges cso:preferentialEquivalent synonym clusters into their preferred topic (the others become aliases) and reads cso:superTopicOf as BROADER: 11,438 concepts, 18,658 BROADER edges. cso:contributesTo (48,980) and cso:relatedEquivalent are not hierarchy and are not emitted."
+      }
+    },
+    {
+      "id": "orkg",
+      "name": "ORKG (Open Research Knowledge Graph)",
+      "kind": "ontology",
+      "status": "loaded",
+      "license": null,
+      "url": "https://orkg.org/class/",
+      "publisher": "TIB Hannover"
+    },
+    {
+      "id": "acm-ccs",
+      "name": "ACM Computing Classification System 2012 (CCS)",
+      "kind": "taxonomy",
+      "status": "loaded",
+      "license": "unstated (ACM copyright)",
+      "url": "https://dl.acm.org/ccs",
+      "publisher": "Association for Computing Machinery",
+      "aliases": [
+        "ACM CCS",
+        "CCS2012"
+      ],
+      "acquire": {
+        "url": "https://dl.acm.org/pb-assets/dl_ccs/acm_ccs2012-1626988337597.xml",
+        "version": "2012",
+        "bytes": 613931,
+        "sha256": "49f7911725537408517d00a3a7fef2ab5600777a9e1c1b79d9a0925b868dc045",
+        "fetched": "2026-10-19",
+        "notes": "SKOS in RDF/XML. The file writes lang=\"en\" where RDF/XML needs xml:lang; vocab_to_graph.py repairs it in memory. Identifiers are bare dotted paths, so convert with --base https://dl.acm.org/ccs2012/: 2,113 concepts, 2,100 BROADER edges, 13 top concepts. No licence is stated in the file or on dl.acm.org/ccs, whose page answers 403 to non-browser clients; the file itself downloads directly. Treat as internal use until the terms are confirmed with ACM."
+      }
+    }
+  ],
+  "from_other_domains": [
+    {
+      "id": "openalex-topics",
+      "name": "OpenAlex Topics taxonomy",
+      "kind": "taxonomy",
+      "status": "loaded",
+      "license": "CC0",
+      "url": "https://docs.openalex.org/api-entities/topics",
+      "publisher": "OurResearch",
+      "aliases": [
+        "OpenAlex topic hierarchy",
+        "OpenAlex domain/field/subfield/topic"
+      ],
+      "domain": "general"
+    }
+  ]
+}
